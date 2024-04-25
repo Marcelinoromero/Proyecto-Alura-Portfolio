@@ -1,0 +1,915 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+@font-face {
+    font-family: "PPMori-Regular";
+    src: url("/assets/font/PPMori-Regular.otf");
+}
+
+@font-face {
+    font-family: "PPMori-SemiBold";
+    src: url("/assets/font/PPMori-SemiBold.otf");
+}
+
+@font-face {
+    font-family: "PPMori-Extralight";
+    src: url("/assets/font/PPMori-Extralight.otf");
+}
+
+
+:root {
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #ffffff;
+}
+
+body {
+
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(220, 236, 238);
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: rgb(39, 39, 39);
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+
+/*Sección Menu*/
+.tudo {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: "PPMori-Regular";
+}
+
+.menu {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    margin-top: 2%;
+    padding: 2%px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #F5F5F5;
+    background: rgb(68, 0, 255);
+    /*background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(115, 8, 255, 1) 50%, rgba(29, 0, 255, 1) 100%);*/
+    padding: 2%;
+}
+
+
+.menu__header {
+
+    width: 100%;
+}
+
+section.menu:hover {
+    transform: scale(1.05);
+    /* Aplicamos un zoom del 10% al pasar el cursor sobre la imagen */
+
+    transition: 0.5s ease-in-out;
+    /* Agregamos un efecto de sombra alrededor de la imagen */
+
+    border: solid #fff;
+
+
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+header {
+
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    width: 1136px;
+}
+
+
+h3 {
+    font-family: "PPMori-SemiBold";
+    font-size: 20px;
+}
+
+.menu__header {
+
+
+    display: flex;
+    align-items: center;
+}
+
+.menu__list {
+
+    display: flex;
+    align-items: start;
+    white-space: nowrap;
+    gap: 15px;
+
+}
+
+
+.menu__list__item__contato {
+
+    display: none;
+}
+
+/*Sección Title*/
+
+
+.title {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    padding: 2%px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.title__container {
+
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: start;
+    padding: 3%;
+
+}
+
+.title__div {
+
+    width: 100%;
+    padding: 2%;
+    margin: 2% 0 2% 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: center;
+    font-family: "PPMori-Extralight";
+}
+
+.title__subsection {
+    font-size: 25px;
+    color: rgb(51, 0, 181);
+}
+
+.title__network {
+
+    font-family: "PPMori-SemiBold";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    gap: 1%;
+    --cor-de-link: rgb(0, 0, 0);
+}
+
+
+
+.title__network__item {
+
+    font-size: 25px;
+
+
+}
+
+.title__foto {
+    position: relative;
+    border-radius: 50%;
+    height: 300px;
+    width: 320px;
+    opacity: 0.8;
+
+}
+
+
+.title__foto:hover {
+    transform: scale(1.1);
+    /* Aplicamos un zoom del 10% al pasar el cursor sobre la imagen */
+    border: rgb(51, 0, 181) 3px solid;
+    box-shadow: 0 0 10px rgb(72, 14, 246);
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    /* Agregamos un efecto de sombra alrededor de la imagen */
+}
+
+
+/*Sección About*/
+
+.about {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.about__container {
+
+    width: 100%;
+    max-width: 1136px;
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 20px;
+    background: rgb(239, 230, 255);
+    background: linear-gradient(55deg, rgba(239, 230, 255, 1) 0%, rgba(255, 254, 240, 1) 58%);
+}
+
+.about__container h3 {
+
+    font-size: 25px;
+    color: rgb(55, 0, 255);
+
+}
+
+/*SECCTION SKILLS*/
+
+.skills {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+
+
+}
+
+.skills__box {
+
+    width: 176px;
+    /* O el ancho deseado */
+    height: 174px;
+    padding: 1%;
+    /* Espacio interno */
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    margin: 1%;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.skills__box:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0, 255, 251);
+}
+
+.skills__box ul {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skills__line {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: self-end;
+}
+
+
+
+/*Sección Hobbies*/
+
+.hobbies {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.hobbies__box {
+
+    display: flex;
+    width: 176px;
+    height: 174px;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    background-color: #fff;
+    margin: 1%;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.hobbies__box:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0, 255, 251);
+}
+
+.hobbies__box ul {
+
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hobbies__line {
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+
+}
+
+/* Experiencia Académica*/
+.academic {
+
+    width: 100%;
+    align-items: center;
+}
+
+.academic__courses__box {
+
+    display: flex;
+    width: 366px;
+    height: 347px;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    background-color: #fff;
+    margin: 1%;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+
+}
+
+.academic__courses__box:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0, 255, 251);
+}
+
+.academic__courses__list {
+
+
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.academic__courses {
+
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 2%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+
+
+}
+
+.academic__courses__item__img {
+    max-width: 100%;
+    /* Establece el ancho máximo de las imágenes al 100% del contenedor */
+    height: auto;
+    border-radius: 3%;
+    justify-content: center;
+
+}
+
+/* experiencia*/
+
+.experience {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    padding: 2%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    color: #F5F5F5;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(115, 8, 255, 1) 50%, rgba(29, 0, 255, 1) 100%);
+    border-radius: 10px;
+
+}
+
+.experience__box {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.experience__info {
+
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+}
+
+.experience__encriptador__img {
+
+    width: 50%;
+    height: auto;
+    border-radius: 2%;
+}
+
+
+/*botones*/
+
+
+button {
+    width: 50%;
+    margin: 1%;
+    color: #000000;
+    border: 2px solid rgb(0, 255, 234);
+    border-radius: 10px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #00128b;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+button:hover {
+    box-shadow: inset 0 100px 0 0 #9900ff;
+    color: #fff;
+}
+
+
+/*Contacto*/
+
+.formcontato {
+
+    display: flex;
+    width: 100%;
+    height: 788px;
+    margin: 0;
+    margin-top: 5%;
+    padding: 10%;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2%;
+}
+
+
+.formcontato__text {
+
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    margin: 5%;
+
+}
+
+.formcontato__contacto {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 788px;
+
+}
+
+.formcontato__form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+
+
+}
+
+.formcontato__input {
+
+    width: 100%;
+    height: 56px;
+    border-radius: 2%;
+    margin: 1%;
+
+}
+
+.formcontato__textarea {
+
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+    margin: 1%;
+
+}
+
+.formcontato--esquerda {
+
+    width: 50%;
+    height: 100%;
+}
+
+.formcontato__img {
+
+    width: 464px;
+    height: 100%;
+    border-radius: 2%;
+}
+
+.formcontato__botao {
+    width: 50%;
+}
+
+
+/*footeer*/
+
+section.footer {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    margin: 0;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(115, 8, 255, 1) 50%, rgba(29, 0, 255, 1) 100%);
+    color: #fff;
+
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media only screen and (max-width: 770px) and (min-width: 375px) {
+
+
+    /* body */
+
+    .body {
+
+        max-width: 768px;
+    }
+
+    .tudo {}
+
+    /* Menú */
+
+    .menu {
+        margin: 0;
+        background: rgb(106, 26, 255);
+        border-radius: 0;
+    }
+
+    section.menu:hover {
+        display: none;
+    }
+
+    .menu ul {
+        display: none;
+        margin: 0;
+    }
+
+    .menu li {
+
+        display: flex;
+    }
+
+    /*title*/
+    .title{
+
+        max-width: 768px;
+        height: 250px;
+    }
+    .title__div{
+        width: 100%;
+        
+    }
+    .title__foto{
+        width: 170px;
+        height: 146px;
+        opacity: 1;
+    }
+    .title__container{
+        height: 245px;
+        margin: 2%;
+        
+    }
+
+    /*Skills*/
+
+    .skills__line{
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 1%;
+        justify-content: center;
+        
+    }
+
+    /*Hobbies*/
+    .hobbies__line{
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 1%;
+        justify-content: center;
+        
+    }
+
+    /*Formación Académica*/
+
+    .academic__courses__box{
+        width: 40%;
+        align-content: center;
+        justify-content: end;
+    }
+    
+    /*Experiencia Profesional*/
+
+    .experience__box{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .experience__info{
+        width: 100%;
+        max-width: 750px;
+    }
+    /*CONTACTO*/
+
+    .formcontato__img{
+        display: none;
+    }
+    .formcontato--esquerda{
+        display: none;
+    }
+    .formcontato__text{
+        width: 100%;
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 375px) {
+
+    /* body */
+
+    .body {
+
+        max-width: 375px;
+    }
+
+/*Menu*/
+.menu {
+
+    max-width: 375px;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    justify-content: space-between;
+    font-size: 10px;
+    margin: 0;
+    background: rgb(4, 173, 252);
+    border-radius: 0;
+    
+}
+
+section.menu:hover {
+    display: none;
+}
+
+.menu ul {
+    display: none;
+    margin: 0;
+}
+
+.menu li {
+
+    display: flex;
+}
+/*Titulo*/
+.title{
+
+    width: 375px;
+    height: 400px;
+    text-align: start;
+    flex-direction: column;
+    padding: 4%;
+    margin-top: 80px;
+}
+.title__div{
+    width: 100%;
+    max-width: 375px;   
+    margin: 0;
+    padding: 0;   
+    flex-direction: column;
+    font-size: 6px;
+    text-align: start;
+    
+    
+}
+.title__foto{
+    display: flex;
+    position:initial;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    
+}
+.title__container{
+
+    width: 100%;
+    max-width: 375px;
+    padding: 2%;
+    
+}
+.title__container h2{
+    font-size: 25px;
+}
+.title__container h3{
+    font-size: 18px;
+}
+.title__network{
+
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 375px;
+    padding: 0;
+    align-items: start;
+    font-family: 'PPMori-Regular';
+    font-size: 15px;
+    flex-flow: row wrap;
+}
+/*Sección sobre mi*/
+#sobre-mi{
+    width: 100%;
+    max-width: 375px;
+    margin: 0;
+    background-color: #F5F5F5;
+}
+.about__container{
+    width: 100%;
+    max-width: 340px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    background:none;
+}
+/*Skills*/
+.skills{
+    max-width: 375px;
+}
+.skills__line{
+    justify-content: start;
+}
+.skills .skills__box{
+    width: 150px;
+}
+
+/*Hobbies*/
+.hobbies{
+    max-width: 375px;
+
+}
+.hobbies__line{
+    justify-content: start;
+}
+.hobbies__box{
+    width: 150px;
+    
+}
+/*Formación Académica*/
+.academic{
+    max-width: 375px;
+    margin-bottom: 15%;
+}
+.academic__courses{
+    width: 100%;
+    max-width: 375px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.academic__courses__box{
+    width: 340px;
+}
+
+/*Experiencia Profesional*/
+.experience{
+    width: 100%;
+    max-width: 375px;
+    align-items: start;
+}
+.experience__box{
+    width: 100%;
+    max-width: 370px;
+    padding: 0; 
+}
+.experience__encriptador__img{
+    width: 350px;
+}
+.experience__info{
+    width: 100%;
+    max-width: 350px;
+}
+/*Contacto*/
+.formcontato{
+    max-width: 375px;
+    height: auto;
+}
+.formcontato__contacto{
+    height: auto;
+    margin: 0;
+}
+/*Footer*/
+.footer{
+max-width: 375px;
+}
+.footer__rodape{
+    font-size: 12px;
+}
+}
